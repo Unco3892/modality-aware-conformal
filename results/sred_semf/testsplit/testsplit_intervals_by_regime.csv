@@ -1,0 +1,15 @@
+family,method,stratum,PICP,MPIW,CRPS,n_seeds,n_cal_mean,n_eval_mean
+aug_theta_testsplit,cqr,full,0.947 +/- 0.019,1.821 +/- 0.124,0.2604 +/- 0.0052,5,554.0,555.0
+aug_theta_testsplit,raw,full,0.116 +/- 0.036,0.114 +/- 0.018,0.3201 +/- 0.0074,5,0.0,555.0
+semf_testsplit,global_cqr,full,0.941 +/- 0.018,3.053 +/- 0.147,0.4397 +/- 0.0339,5,554.0,555.0
+semf_testsplit,global_cqr,no_img,0.923 +/- 0.018,3.050 +/- 0.148,0.4725 +/- 0.0310,5,554.0,555.0
+semf_testsplit,global_cqr,no_text,0.938 +/- 0.015,3.056 +/- 0.152,0.4480 +/- 0.0343,5,554.0,555.0
+semf_testsplit,global_cqr,tab_only,0.921 +/- 0.020,3.045 +/- 0.157,0.4800 +/- 0.0310,5,554.0,555.0
+semf_testsplit,mask_matched_cqr,full,0.941 +/- 0.018,3.053 +/- 0.147,0.4397 +/- 0.0339,5,554.0,555.0
+semf_testsplit,mask_matched_cqr,no_img,0.946 +/- 0.014,3.393 +/- 0.107,0.4828 +/- 0.0275,5,554.0,555.0
+semf_testsplit,mask_matched_cqr,no_text,0.942 +/- 0.015,3.140 +/- 0.173,0.4506 +/- 0.0344,5,554.0,555.0
+semf_testsplit,mask_matched_cqr,tab_only,0.947 +/- 0.013,3.472 +/- 0.167,0.4927 +/- 0.0272,5,554.0,555.0
+semf_testsplit,raw,full,0.186 +/- 0.062,0.320 +/- 0.077,0.5260 +/- 0.0605,5,0.0,555.0
+semf_testsplit,raw,no_img,0.176 +/- 0.034,0.317 +/- 0.064,0.5777 +/- 0.0502,5,0.0,555.0
+semf_testsplit,raw,no_text,0.186 +/- 0.051,0.323 +/- 0.073,0.5384 +/- 0.0585,5,0.0,555.0
+semf_testsplit,raw,tab_only,0.168 +/- 0.040,0.312 +/- 0.067,0.5908 +/- 0.0504,5,0.0,555.0

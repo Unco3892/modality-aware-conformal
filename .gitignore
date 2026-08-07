@@ -3,8 +3,6 @@
 # default; a deliberately curated artifact can still be added explicitly.
 /data/*
 !/data/cache_manifest.json
-/results/
-/archive/
 
 # Python artifacts
 .venv/

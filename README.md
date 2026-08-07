@@ -109,36 +109,36 @@ data/
 
 ### Reference cache workflow
 
-The reported experiments use a locally installed, verified reference cache.
-For the present private workflow, place the reviewed arrays in the
-directories above and verify them against the tracked input inventory in
-`src/multimodal_calibration/experiment_config.py`.
+The reported experiments use the verified reference caches published as the
+[`caches-v1` GitHub release](https://github.com/Unco3892/modality-aware-conformal/releases/tag/caches-v1).
+The download URL is recorded in the manifest, so a single command fetches and
+installs everything:
+
+```bash
+python src/multimodal_calibration/download_caches.py
+```
 
 The installer uses the tracked `data/cache_manifest.json`, which fixes every
 archive and extracted array by name, size, and checksum (SHA-256). This
 prevents a partial download or a different feature build from being used
-silently. Install the reviewed local bundle with:
-
-```bash
-python src/multimodal_calibration/download_caches.py --archive-dir /path/to/cache_release
-```
-
-The directory must contain one manifest-named ZIP for each requested dataset.
-The installer validates the archive and every extracted array before
+silently: each archive and every extracted array is validated before
 installation. Verify an existing installation without changing it with:
 
 ```bash
 python src/multimodal_calibration/download_caches.py --verify-only
 ```
 
-Subject to the underlying dataset licences, a future GitHub release can use
-the same installer:
+Release assets downloaded by hand can be installed from a local directory
+instead:
 
 ```bash
-python src/multimodal_calibration/download_caches.py --base-url https://github.com/Unco3892/modality-aware-conformal/releases/download/CACHE_TAG
+python src/multimodal_calibration/download_caches.py --archive-dir /path/to/cache_release
 ```
 
-The release path must use an immutable tag rather than `latest`. No public cache release is configured or claimed at present.
+The recorded release path uses an immutable tag rather than `latest`, and any
+future cache update ships as a new tag with an updated manifest. The archives
+contain derived frozen-encoder features rather than the raw datasets, and the
+raw inputs remain subject to their original licences (see below).
 
 ### Raw inputs
 

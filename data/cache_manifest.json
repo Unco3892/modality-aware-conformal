@@ -2,8 +2,8 @@
   "schema_version": 1,
   "bundle_version": "copa2026-reference-cache-v1",
   "release": {
-    "base_url": null,
-    "status": "local_only_pending_redistribution_review"
+    "base_url": "https://github.com/Unco3892/modality-aware-conformal/releases/download/caches-v1",
+    "status": "published"
   },
   "archives": [
     {

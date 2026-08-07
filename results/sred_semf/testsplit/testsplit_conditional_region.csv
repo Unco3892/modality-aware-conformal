@@ -1,0 +1,9 @@
+family,method,stratum,PICP,MPIW,CRPS,n_seeds,n_cal_mean,n_eval_mean
+semf_testsplit,global_cqr,0,0.942 +/- 0.024,3.008 +/- 0.150,0.4248 +/- 0.0531,5,554.0,127.8
+semf_testsplit,global_cqr,1,0.929 +/- 0.032,3.054 +/- 0.142,0.4652 +/- 0.0491,5,554.0,170.6
+semf_testsplit,global_cqr,2,0.950 +/- 0.029,3.043 +/- 0.154,0.4108 +/- 0.0595,5,554.0,187.6
+semf_testsplit,global_cqr,3,0.930 +/- 0.042,3.106 +/- 0.150,0.4836 +/- 0.0753,5,554.0,69.0
+semf_testsplit,mondrian_cqr,0,0.966 +/- 0.029,3.507 +/- 0.392,0.4442 +/- 0.0531,5,129.6,127.8
+semf_testsplit,mondrian_cqr,1,0.951 +/- 0.024,3.438 +/- 0.478,0.4775 +/- 0.0532,5,167.8,170.6
+semf_testsplit,mondrian_cqr,2,0.933 +/- 0.029,2.710 +/- 0.356,0.3992 +/- 0.0646,5,190.2,187.6
+semf_testsplit,mondrian_cqr,3,0.966 +/- 0.038,3.870 +/- 0.739,0.5094 +/- 0.0699,5,66.4,69.0
