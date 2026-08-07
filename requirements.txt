@@ -1,0 +1,46 @@
+# Tested environment for the reported results.
+#
+# These versions define the audited downstream environment. Together with the
+# validated embedding-cache hashes and a Linux x86-64 runtime, they reproduce
+# the current-code result campaign. They are not a claim that stale historical
+# artifacts or raw-to-embedding rebuilds are bit-identical. Python 3.11.
+
+# --- these determine the numerical results ---
+numpy==2.4.4
+pandas==3.0.3
+scikit-learn==1.8.0
+scipy==1.17.1
+xgboost==3.2.0
+torch==2.5.1
+joblib==1.5.3
+threadpoolctl==3.6.0
+pyarrow==24.0.0
+
+# --- imported at module level by the SRED and SEMF code paths ---
+matplotlib==3.10.9
+pillow==12.2.0
+openml==0.15.1
+
+# --- Stage 0 only: acquiring raw data and building the embedding caches.
+# These were not part of the verified environment above, because the reported
+# experiments consume the caches rather than build them. Rebuild dependencies
+# and remote model revisions are pinned because either can shift all downstream
+# numbers. A rebuild remains approximate unless its output hashes match the
+# paper cache manifest.
+sentence-transformers==5.2.2
+transformers==4.51.3
+huggingface-hub==0.36.2
+torchvision==0.20.1
+kagglehub==1.0.2
+
+# --- optional ---
+# lightgbm powers one predictor variant in predictors.py; seaborn is needed
+# only by semf/visualize.py, which no experiment driver imports; tabpfn is
+# licence-restricted and used only by an unreported predictor variant.
+lightgbm==4.6.0
+# seaborn
+# tabpfn
+
+# --- validation ---
+pytest==8.3.5
+ruff==0.5.1

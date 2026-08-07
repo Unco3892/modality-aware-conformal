@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "bundle_version": "copa2026-reference-cache-v1",
+  "release": {
+    "base_url": null,
+    "status": "local_only_pending_redistribution_review"
+  },
+  "archives": [
+    {
+      "dataset": "imdb_wiki",
+      "filename": "imdb_wiki_embeddings.zip",
+      "bytes": 108507680,
+      "sha256": "0f182b1d8782491e1016a942f3c3464e55b1568e6c364c41fd49b83ad67d2af0",
+      "target_subdir": "imdb_wiki/embeddings",
+      "members": {
+        "test_face_dinov2-vits14.npy": {
+          "bytes": 6024320,
+          "sha256": "91e3753246fdc893a0f5731502adf29ada7fa27f45bfc798048f19225e285fbc"
+        },
+        "test_name_paraphrase-multilingual-MiniLM-L12-v2.npy": {
+          "bytes": 6024320,
+          "sha256": "468dbc24e7ce386de79831ef0f9c2a932f5c0409f7c0058b412829631d6d72d3"
+        },
+        "train_face_dinov2-vits14.npy": {
+          "bytes": 52551296,
+          "sha256": "eb83e30c0f863a20f81ba5abcbb14d68e754fe8217d67fbea9f3826e5aac2b35"
+        },
+        "train_name_paraphrase-multilingual-MiniLM-L12-v2.npy": {
+          "bytes": 52551296,
+          "sha256": "3cd2a0927c5ae78f94516b3a3929b77e57a2264c36ce2329df47224082c67983"
+        }
+      }
+    },
+    {
+      "dataset": "mercari",
+      "filename": "mercari_embeddings.zip",
+      "bytes": 139791965,
+      "sha256": "0fd72eb619fe23b8e6543d425e3ca37783d5bb2437f9a0ac4673d9f137da2dbd",
+      "target_subdir": "mercari/embeddings",
+      "members": {
+        "test_item_description_paraphrase-multilingual-MiniLM-L12-v2.npy": {
+          "bytes": 15360128,
+          "sha256": "ecf0108a5987784cc0af0bc2d1547dc3c1a47777401285e28ce690befed3f674"
+        },
+        "test_name_paraphrase-multilingual-MiniLM-L12-v2.npy": {
+          "bytes": 15360128,
+          "sha256": "0d288ff7aa187204546d8bd45978c1fc8ef79fe8bcee122e98aaf650cdae5813"
+        },
+        "train_item_description_paraphrase-multilingual-MiniLM-L12-v2.npy": {
+          "bytes": 61440128,
+          "sha256": "e2e9563c9a2bd5c81ee5c73ddc25bb5f9bda6444c0c7309140aca668b53e20cb"
+        },
+        "train_name_paraphrase-multilingual-MiniLM-L12-v2.npy": {
+          "bytes": 61440128,
+          "sha256": "c043e05fa9ec9a9c820bf8e377d52a27b068f8ac7dbd00b89d9cbe4e52d82f84"
+        }
+      }
+    },
+    {
+      "dataset": "pawpularity",
+      "filename": "pawpularity_embeddings.zip",
+      "bytes": 14104848,
+      "sha256": "8cf8812b05adf63da5715a7376aec8d5d514a8f2f5bab9a55b48e5c81cda32c0",
+      "target_subdir": "pawpularity/embeddings",
+      "members": {
+        "test_photo_dinov2-vits14.npy": {
+          "bytes": 3046016,
+          "sha256": "1fb350b6b011714d347feb32cd1c251ae0f30f20d030a5b9c097e5670f24583f"
+        },
+        "train_photo_dinov2-vits14.npy": {
+          "bytes": 12179072,
+          "sha256": "891f0c2462e640d903028d3d8eb369cea88aad08c5d259d1838b213e16f2b95c"
+        }
+      }
+    },
+    {
+      "dataset": "sred",
+      "filename": "sred_embeddings.zip",
+      "bytes": 208884221,
+      "sha256": "9fb1847604d962bf9fbb27cb0f579ee4a3c9102995c4cc15d6e358e2e08a23bc",
+      "target_subdir": "sred/embeddings",
+      "members": {
+        "test_ad_description_multilingual-e5-large.npy": {
+          "bytes": 4542592,
+          "sha256": "3bd3f8f0320624bdc31b60a07d64b66854a29adf4b33fd1a30f4237e03ae9fe9"
+        },
+        "test_ad_description_paraphrase-multilingual-MiniLM-L12-v2.npy": {
+          "bytes": 1703552,
+          "sha256": "4b45b31aa94da85f47564dc18e0dd3863673f1ff07bc1fa5f66798479e9eb3ab"
+        },
+        "test_header_multilingual-e5-large.npy": {
+          "bytes": 4542592,
+          "sha256": "e4e97cd7fda7e00ffd924d760ee990aab7db8e21f0d1aa33c01b71263fa59e81"
+        },
+        "test_header_paraphrase-multilingual-MiniLM-L12-v2.npy": {
+          "bytes": 1703552,
+          "sha256": "2caf52cbda6fbda9c7706077eec9b18230aa174d7925eb4de21dcc46e4efdf23"
+        },
+        "test_montage_organized_dinov2-vitb14.npy": {
+          "bytes": 3406976,
+          "sha256": "ff5ba17aaa602bf193312df3f10e4d833bf487225bace047640a90a9fbe4f78e"
+        },
+        "test_montage_organized_dinov2-vits14.npy": {
+          "bytes": 1703552,
+          "sha256": "dd307c2ae5cd7d85c8857d15acfc827efdb3679fabb91de4a131be10c3d933f7"
+        },
+        "test_satellite_dinov2-vitb14.npy": {
+          "bytes": 3406976,
+          "sha256": "b01e4ff6db6a6528c688b453652980f9b2e5f7a44d804abdbc56c9b53d7acdcd"
+        },
+        "test_satellite_dinov2-vits14.npy": {
+          "bytes": 1703552,
+          "sha256": "0580a90a3ab1d793c06182e0bcc74cc0dea87510e4bfddfaaf1695e018135496"
+        },
+        "train_ad_description_multilingual-e5-large.npy": {
+          "bytes": 40943744,
+          "sha256": "4fbccc7b086b2c9d94f662efd7200687493fe984903b948ebb1e5d15c399ae36"
+        },
+        "train_ad_description_paraphrase-multilingual-MiniLM-L12-v2.npy": {
+          "bytes": 15353984,
+          "sha256": "c8febdfa3f26935705521a2f30864e8038b81cb7fd5b08000267fd7a2a63c2fa"
+        },
+        "train_header_multilingual-e5-large.npy": {
+          "bytes": 40943744,
+          "sha256": "f6770efd140cc63694fa486e000cac21d93e5fc386feda641485ded63c32d521"
+        },
+        "train_header_paraphrase-multilingual-MiniLM-L12-v2.npy": {
+          "bytes": 15353984,
+          "sha256": "bcc050559f7354b51ddbc27ded02b68518a7be2110edcc04d52c910c9baaec69"
+        },
+        "train_montage_organized_dinov2-vitb14.npy": {
+          "bytes": 30707840,
+          "sha256": "4bad2bda8892fd1fd9b77955993f60ff239d9b40721025b3ee43380e1f5ffdbd"
+        },
+        "train_montage_organized_dinov2-vits14.npy": {
+          "bytes": 15353984,
+          "sha256": "df9e1630b663ed85f894af0e931ad6720b32afeb1bd72b2df5882c61d16492fa"
+        },
+        "train_satellite_dinov2-vitb14.npy": {
+          "bytes": 30707840,
+          "sha256": "008a53e8d856a47278e29856f242a46916d43dce843bd75c0c102f81ab1bc919"
+        },
+        "train_satellite_dinov2-vits14.npy": {
+          "bytes": 15353984,
+          "sha256": "ad20a9d0f271ce548dc32f96eaeb03c953bb0413f78248469c5696eb7afdfaf9"
+        }
+      }
+    }
+  ]
+}

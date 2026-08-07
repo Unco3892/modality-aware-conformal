@@ -1,0 +1,42 @@
+# Files already committed under results/ (curated summary CSV/JSON/LaTeX)
+# stay tracked regardless. Keep every newly generated result private by
+# default; a deliberately curated artifact can still be added explicitly.
+/data/*
+!/data/cache_manifest.json
+/results/
+/archive/
+
+# Python artifacts
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Local tool configuration
+.env
+.vscode/
+workspace.code-workspace
+
+# Legacy synthetic pipeline caches (src/shared/modeling/synthetic/)
+src/shared/modeling/synthetic/data/MNIST
+src/shared/modeling/synthetic/best_model.pth
+wandb/
+
+# Run artifacts. `logs/` and `lightning_logs/` are bare patterns (no leading
+# slash), so they match a directory with that name at ANY depth, e.g. a
+# cluster job's own logs/ dir or src/shared/modeling/synthetic/lightning_logs/.
+# This is intentional: keep both bare so new occurrences are caught wherever
+# they land, not just at the paths seen so far.
+logs/
+lightning_logs/
+
+# LaTeX build artifacts
+*.aux
+*.blg
+*.log
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
