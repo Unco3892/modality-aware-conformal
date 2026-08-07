@@ -110,7 +110,8 @@ data/
 ### Reference cache workflow
 
 The reported experiments use the verified reference caches published as the
-[`caches-v1` GitHub release](https://github.com/Unco3892/modality-aware-conformal/releases/tag/caches-v1).
+`caches-v1` GitHub release, browsable and downloadable at
+<https://github.com/Unco3892/modality-aware-conformal/releases/tag/caches-v1>.
 The download URL is recorded in the manifest, so a single command fetches and
 installs everything:
 
@@ -128,8 +129,8 @@ installation. Verify an existing installation without changing it with:
 python src/multimodal_calibration/download_caches.py --verify-only
 ```
 
-Release assets downloaded by hand can be installed from a local directory
-instead:
+The four `*_embeddings.zip` archives and `SHA256SUMS.txt` on that release page
+can also be downloaded by hand and installed from a local directory:
 
 ```bash
 python src/multimodal_calibration/download_caches.py --archive-dir /path/to/cache_release
