@@ -74,9 +74,9 @@ local CUDA environment before installing the remaining requirements.
 │   │   ├── run_missing_regime_ablation.py  # stress tests with missing modalities
 │   │   ├── run_hetero_mixture.py           # source-wise mixture experiments
 │   │   ├── run_nn_baselines.py             # neural baselines
-│   │   ├── aggregate_with_nn.py             # auxiliary-result aggregation
-│   │   ├── exp_worked_examples.py           # worked-example generation
-│   │   ├── exp_gamma_sim.py                 # simulation of scale tuning at small sample sizes
+│   │   ├── aggregate_with_nn.py            # auxiliary-result aggregation
+│   │   ├── exp_worked_examples.py          # worked-example generation
+│   │   ├── exp_gamma_sim.py                # simulation of scale tuning at small sample sizes
 │   │   ├── run_baseline.py                 # frozen-feature construction
 │   │   └── loaders/                        # dataset-specific loaders
 │   ├── sred/
