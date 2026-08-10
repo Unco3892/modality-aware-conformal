@@ -1103,9 +1103,8 @@ document.documentElement.setAttribute("data-theme",t);}catch(e){document.documen
 <section id="math">
   <div class="step-head"><span class="step-num">6</span><h2>Understanding the propositions</h2><span class="time">4 min</span></div>
   <p>For a reader who wants to inspect the math, there are exactly two propositions. Both are
-  <strong>standard split-conformal exchangeability arguments applied to the new scores</strong>, and the
-  paper is upfront about that. What is specific to this paper is the careful statement of <em>when</em>
-  they apply.</p>
+  <strong>standard split-conformal exchangeability arguments applied to the new scores</strong>.
+  What we add is the careful statement of <em>when</em> they apply.</p>
 
   <div class="cols">
     <div class="card">
@@ -1381,25 +1380,21 @@ document.documentElement.setAttribute("data-theme",t);}catch(e){document.documen
       <h3>Validity and evaluation scope</h3>
       <ul>
         <li>The finite-sample guarantees require every learned or tuned choice to be fixed before calibration, followed by jointly exchangeable calibration and test examples. The cross-dataset benchmark uses separate fit, tune, calibration, and test splits.</li>
-        <li>The four-way split enforces data separation but does not establish exchangeability. The paper reports that 37 of 1,109 SRED test rows exactly match a training row on latitude, longitude, living space, room count, and recorded rent, and that 43 of 3,922 IMDB-WIKI test rows share a normalized non-empty name with the training split. These overlaps may weaken the plausibility of row-level exchangeability.</li>
+        <li>The four-way split enforces data separation but does not establish exchangeability. We find that 37 of 1,109 SRED test rows exactly match a training row on latitude, longitude, living space, room count, and recorded rent, and that 43 of 3,922 IMDB-WIKI test rows share a normalized non-empty name with the training split. These overlaps may weaken the plausibility of row-level exchangeability.</li>
         <li>Calibration groups need enough data. At a 95% target, each protected Mondrian group needs at least 19 calibration examples even to form the finite split-conformal quantile.</li>
         <li>The missing-modality experiments zero the masked modality's feature block in calibration and evaluation. They are controlled stress tests, not evidence about naturally occurring or informative missingness.</li>
-        <li>NCIW uses test labels and is therefore an evaluation diagnostic. Interval CRPS here scores a uniform distribution over the reported interval, not a complete predictive distribution.</li>
       </ul>
     </div>
     <div class="card">
       <h3>Method limits and next steps</h3>
       <ul>
         <li>The scalar disagreement score gives each available source equal weight. It can miss cross-modal dependence and differences in source reliability, and correlated or substitute predictors can agree while all are wrong.</li>
-        <li>Its behavior depends on the number and redundancy of the available sources. We therefore keep the source set fixed in the continuous experiments and handle missing modalities with a separate regime rule.</li>
-        <li>Fixing γ = 1 on a pre-specified standardized scale removes only the dedicated step of selecting the scale. Tuning the base predictor remains, while richer learned scales require sufficient independent tuning data. A score-level simulation in the paper quantifies when spending labels on tuning the scale is worthwhile.</li>
+        <li>The disagreement score's behavior depends on the number and redundancy of the available sources. We therefore keep the source set fixed in the continuous experiments and handle missing modalities with a separate regime rule.</li>
+        <li>Fixing γ = 1 on a pre-specified standardized scale removes only the dedicated step of selecting the scale. Tuning the base predictor remains, while richer learned scales require sufficient independent tuning data. We use a simulation in the paper to quantify when spending labels on tuning the scale is worthwhile.</li>
         <li>Priorities for future work are cross-fitting, disagreement weighted by source reliability, systematic studies of source count and redundancy, natural missingness, and corruption at deployment.</li>
       </ul>
     </div>
   </div>
-  <p class="note">The SRED analyses based on saved SEMF-derived outputs are wrapper diagnostics rather
-  than formal proposition instances; the theoretical claims do not depend on that base predictor's
-  internal training details.</p>
 </section>
 
 <!-- ============ QA ============ -->
