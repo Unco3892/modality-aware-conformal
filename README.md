@@ -12,9 +12,11 @@
 <sup>1</sup> Department of Operations, HEC Lausanne, University of Lausanne, Switzerland
 <sup>2</sup> BegooAI, Switzerland
 
-## Abstract
+![The calibration layer: three per-modality predictors feed a disagreement score, a fixed base predictor supplies the interval, and one calibration step follows, either disagreement-scaled CQR or Mondrian. Below, a worked example across three regimes.](docs/fig1_overview_standalone.png)
 
-Prediction intervals for multi-modal regression with tabular variables, text,
+<p align="center"><sub><b>Figure 1.</b> The calibration layer (top) and a worked example on log(rent) at a 95% target (bottom), where a global quantile does not adapt.</sub></p>
+
+**Abstract**: Prediction intervals for multi-modal regression with tabular variables, text,
 images, or other input sources are difficult to calibrate when those sources
 disagree or one is missing. A single global quantile averages these regimes
 together instead of calibrating to the modality pattern observed at test time.
@@ -253,8 +255,7 @@ are listed in `requirements.txt`.
 
 ## Citation
 
-The paper is accepted at COPA 2026. Until PMLR volume 329 appears, please cite
-the arXiv preprint, which is the version currently resolvable:
+The paper is accepted at COPA 2026. Until PMLR volume 329 appears, please cite the arXiv preprint:
 
 ```bibtex
 @misc{azizi2026modality,
@@ -268,7 +269,7 @@ the arXiv preprint, which is the version currently resolvable:
 }
 ```
 
-Once the proceedings are published, cite the version of record instead:
+<!-- Once the proceedings are published, cite the version of record instead:
 
 ```bibtex
 @inproceedings{azizi2026modality,
@@ -280,7 +281,8 @@ Once the proceedings are published, cite the version of record instead:
   year      = {2026},
   publisher = {PMLR}
 }
-```
+``` 
+-->
 
 ## License
 
