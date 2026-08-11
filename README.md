@@ -2,9 +2,9 @@
 
 [![Project page](https://img.shields.io/badge/Project_page-online-7C3AED?logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjIuMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48cGF0aCBkPSJNMy41IDYuNWgxN00zLjUgMTJoMTdNMy41IDE3LjVoMTciLz48Y2lyY2xlIGN4PSI4IiBjeT0iNi41IiByPSIyLjUiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0ibm9uZSIvPjxjaXJjbGUgY3g9IjE2IiBjeT0iMTIiIHI9IjIuNSIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSJub25lIi8+PGNpcmNsZSBjeD0iMTAuNSIgY3k9IjE3LjUiIHI9IjIuNSIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSJub25lIi8+PC9zdmc+)](https://unco3892.github.io/modality-aware-conformal/)
 [![Paper](https://img.shields.io/badge/Paper-PDF-0b7285?logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjIuMSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBkPSJNMTQgMi44SDYuNEEyLjQgMi40IDAgMCAwIDQgNS4ydjEzLjZhMi40IDIuNCAwIDAgMCAyLjQgMi40aDExLjJhMi40IDIuNCAwIDAgMCAyLjQtMi40VjguOHoiLz48cGF0aCBkPSJNMTQgMi44VjguOGg2Ii8+PHBhdGggZD0iTTggMTMuNGg4TTggMTcuMmg1LjUiLz48L3N2Zz4=)](http://iliaazizi.com/publications/modality-aware-conformal/copa_2026.pdf)
+[![arXiv](https://img.shields.io/badge/arXiv-2608.07795-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2608.07795)
 [![Python](https://img.shields.io/badge/python-3.11-3776ab?logo=python&logoColor=white)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-MIT-2ea44f?logo=opensourceinitiative&logoColor=white)](LICENSE)
-<!-- [![arXiv](https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/XXXX.XXXXX) -->
 <!-- [![COPA 2026](https://img.shields.io/badge/COPA_2026-PMLR_v329-0b7285?logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjIuMSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBkPSJNMTQgMi44SDYuNEEyLjQgMi40IDAgMCAwIDQgNS4ydjEzLjZhMi40IDIuNCAwIDAgMCAyLjQgMi40aDExLjJhMi40IDIuNCAwIDAgMCAyLjQtMi40VjguOHoiLz48cGF0aCBkPSJNMTQgMi44VjguOGg2Ii8+PHBhdGggZD0iTTggMTMuNGg4TTggMTcuMmg1LjUiLz48L3N2Zz4=)](https://proceedings.mlr.press/v329/) -->
 
 **[Ilia Azizi](https://iliaazizi.com)**<sup>1,2</sup>
@@ -252,6 +252,23 @@ allocations of up to 48 CPUs and 48 GB of RAM. The exact dependency versions
 are listed in `requirements.txt`.
 
 ## Citation
+
+The paper is accepted at COPA 2026. Until PMLR volume 329 appears, please cite
+the arXiv preprint, which is the version currently resolvable:
+
+```bibtex
+@misc{azizi2026modality,
+  title         = {Conformal Calibration for Multi-Modal Regression with Missing Modalities},
+  author        = {Azizi, Ilia},
+  year          = {2026},
+  eprint        = {2608.07795},
+  archivePrefix = {arXiv},
+  primaryClass  = {stat.ML},
+  url           = {https://arxiv.org/abs/2608.07795}
+}
+```
+
+Once the proceedings are published, cite the version of record instead:
 
 ```bibtex
 @inproceedings{azizi2026modality,

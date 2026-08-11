@@ -482,6 +482,33 @@ document.documentElement.setAttribute("data-theme",t);}catch(e){document.documen
     .refs { font-family: Georgia, "Times New Roman", serif; }
     .refs p { padding-left: 0; text-indent: 0; overflow-wrap: break-word; }
   }
+  /* ---------- citation ---------- */
+  .bibtex {
+    font-family: Consolas, "SF Mono", monospace; font-size: .78rem; line-height: 1.55;
+    background: var(--card); border: 1px solid var(--line); border-radius: 3px;
+    color: var(--ink-2); padding: .85rem 1rem; margin: 0 0 1rem;
+    overflow-x: auto; white-space: pre; tab-size: 2;
+  }
+  .citeblock { position: relative; margin: 0 0 1rem; }
+  .citeblock .bibtex { margin: 0; padding-right: 5.75rem; }
+  .copybtn {
+    position: absolute; top: .5rem; right: .5rem; z-index: 1;
+    display: inline-flex; align-items: center; gap: .35rem;
+    font-family: var(--sans); font-size: .76rem; font-weight: 500; line-height: 1; cursor: pointer;
+    color: var(--ink-3); background: var(--card-2); border: 1px solid var(--line-2);
+    border-radius: 3px; padding: .42rem .6rem; min-height: 2rem;
+  }
+  /* confirmation reuses the hover treatment: no separate success colour */
+  .copybtn:hover, .copybtn.done { color: var(--ink); border-color: var(--brand); }
+  .copybtn:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+  .copybtn svg { width: .85rem; height: .85rem; display: block; fill: none;
+    stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  .copybtn .i-done { display: none; }
+  .copybtn.done .i-copy { display: none; }
+  .copybtn.done .i-done { display: block; }
+  /* touch devices have no hover affordance and need a full-size tap target */
+  @media (pointer: coarse) { .copybtn { min-height: 2.75rem; padding: .6rem .7rem; } }
+
   footer { padding-top: .65rem; padding-bottom: 1.75rem; font-family: var(--sans); font-size: .76rem; color: var(--ink-3); text-align: center; }
   .sr-only {
     position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
@@ -567,11 +594,11 @@ document.documentElement.setAttribute("data-theme",t);}catch(e){document.documen
   <p class="affils"><a href="https://www.unil.ch/hec/en/home/menuinst/faculte/departements/do.html">Department of Operations, HEC Lausanne, University of Lausanne, Switzerland</a></p>
   <p class="affils"><a href="https://begoo.ai">BegooAI, Switzerland</a></p>
   <div class="btn-row">
-    <!-- arXiv button hidden until the preprint is public: <span class="btn btn-arxiv soon" title="Preprint coming soon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.8423 0a1.0037 1.0037 0 0 0-.922.6078c-.1536.3687-.0438.6275.2938 1.1113l6.9185 8.3597-1.0223 1.1058a1.0393 1.0393 0 0 0 .003 1.4229l1.2292 1.3135-5.4391 6.4444c-.2803.299-.4538.823-.2971 1.1986a1.0253 1.0253 0 0 0 .9585.635.9133.9133 0 0 0 .6891-.3405l5.783-6.126 7.4902 8.0051a.8527.8527 0 0 0 .6835.2597.9575.9575 0 0 0 .8777-.6138c.1577-.377-.017-.7502-.306-1.1407l-7.0518-8.3418 1.0632-1.13a.9626.9626 0 0 0 .0089-1.3165L4.6336.4639s-.3733-.4535-.768-.463zm0 .272h.0166c.2179.0052.4874.2715.5644.3639l.005.006.0052.0055 10.169 10.9905a.6915.6915 0 0 1-.0072.945l-1.0666 1.133-1.4982-1.7724-8.5994-10.39c-.3286-.472-.352-.6183-.2592-.841a.7307.7307 0 0 1 .6704-.4401Zm14.341 1.5701a.877.877 0 0 0-.6554.2418l-5.6962 6.1584 1.6944 1.8319 5.3089-6.5138c.3251-.4335.479-.6603.3247-1.0292a1.1205 1.1205 0 0 0-.9763-.689zm-7.6557 12.2823 1.3186 1.4135-5.7864 6.1295a.6494.6494 0 0 1-.4959.26.7516.7516 0 0 1-.706-.4669c-.1119-.2682.0359-.6864.2442-.9083l.0051-.0055.0047-.0055z"/></svg>arXiv (soon)</span> -->
+    <a class="btn btn-arxiv" href="https://arxiv.org/abs/2608.07795" title="arXiv preprint (2608.07795)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.8423 0a1.0037 1.0037 0 0 0-.922.6078c-.1536.3687-.0438.6275.2938 1.1113l6.9185 8.3597-1.0223 1.1058a1.0393 1.0393 0 0 0 .003 1.4229l1.2292 1.3135-5.4391 6.4444c-.2803.299-.4538.823-.2971 1.1986a1.0253 1.0253 0 0 0 .9585.635.9133.9133 0 0 0 .6891-.3405l5.783-6.126 7.4902 8.0051a.8527.8527 0 0 0 .6835.2597.9575.9575 0 0 0 .8777-.6138c.1577-.377-.017-.7502-.306-1.1407l-7.0518-8.3418 1.0632-1.13a.9626.9626 0 0 0 .0089-1.3165L4.6336.4639s-.3733-.4535-.768-.463zm0 .272h.0166c.2179.0052.4874.2715.5644.3639l.005.006.0052.0055 10.169 10.9905a.6915.6915 0 0 1-.0072.945l-1.0666 1.133-1.4982-1.7724-8.5994-10.39c-.3286-.472-.352-.6183-.2592-.841a.7307.7307 0 0 1 .6704-.4401Zm14.341 1.5701a.877.877 0 0 0-.6554.2418l-5.6962 6.1584 1.6944 1.8319 5.3089-6.5138c.3251-.4335.479-.6603.3247-1.0292a1.1205 1.1205 0 0 0-.9763-.689zm-7.6557 12.2823 1.3186 1.4135-5.7864 6.1295a.6494.6494 0 0 1-.4959.26.7516.7516 0 0 1-.706-.4669c-.1119-.2682.0359-.6864.2442-.9083l.0051-.0055.0047-.0055z"/></svg>arXiv</a>
     <a class="btn btn-paper" href="https://iliaazizi.com/publications/modality-aware-conformal/copa_2026.pdf" title="Paper (PDF)"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 1 0 1h4a.5.5 0 0 1 0-1z"/></svg>Paper</a>
     <a class="btn btn-github" href="https://github.com/Unco3892/modality-aware-conformal" title="Code and exact experiment caches"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>Code</a>
   </div>
-  <p class="published"><a href="https://copa-conference.com/">Published at the Symposium on Conformal and Probabilistic Prediction with Applications (COPA 2026)</a></p>
+  <p class="published"><a href="https://copa-conference.com/">Accepted at the Symposium on Conformal and Probabilistic Prediction with Applications (COPA 2026)</a></p>
   <div class="abstract">
     <span class="bl-label">Abstract</span>
     <p>Prediction intervals for multi-modal regression with tabular variables, text, images, or other
@@ -609,6 +636,7 @@ document.documentElement.setAttribute("data-theme",t);}catch(e){document.documen
     <a href="#qa">Q&amp;A</a>
     <a href="#glossary">Glossary</a>
     <a href="#references">References</a>
+    <a href="#cite">Cite</a>
     </div>
     </div>
     <div class="searchwrap">
@@ -1399,7 +1427,7 @@ document.documentElement.setAttribute("data-theme",t);}catch(e){document.documen
 
 <!-- ============ QA ============ -->
 <section id="qa">
-  <div class="step-head"><span class="step-num">9</span><h2>Questions &amp; answers</h2><span class="time">FAQ</span></div>
+  <div class="step-head"><span class="step-num">9</span><h2>Questions &amp; answers</h2></div>
   <details class="qa"><summary>What exactly is the contribution? It looks like standard conformal prediction.</summary>
     <div class="body"><p>The contribution is the use of <strong>source-wise disagreement and modality
     availability as explicit calibration variables</strong> for multi-modal regression, together with
@@ -1551,7 +1579,7 @@ document.documentElement.setAttribute("data-theme",t);}catch(e){document.documen
 
 <!-- ============ GLOSSARY ============ -->
 <section id="glossary">
-  <div class="step-head"><span class="step-num">10</span><h2>Pocket glossary</h2><span class="time">reference</span></div>
+  <div class="step-head"><span class="step-num">10</span><h2>Pocket glossary</h2></div>
   <dl class="gloss">
     <dt>Conformal prediction</dt><dd>Distribution-free recipe turning any predictor plus held-out data into intervals with finite-sample coverage, provided the rules are fixed before calibration and the data are exchangeable.</dd>
     <dt>Split conformal</dt><dd>The practical variant: fit on one split, compute error quantile q̂ on a calibration split, pad test predictions with it.</dd>
@@ -1571,8 +1599,8 @@ document.documentElement.setAttribute("data-theme",t);}catch(e){document.documen
 
 <!-- ============ REFERENCES ============ -->
 <section id="references">
-  <div class="step-head"><span class="step-num">11</span><h2>References</h2><span class="time">bibliography</span></div>
-  <p style="font-size:.92rem">Selected works this page draws on, taken from our full bibliography.</p>
+  <div class="step-head"><span class="step-num">11</span><h2>References</h2></div>
+  <p class="lede">Selected works this page draws on; the <a href="https://arxiv.org/abs/2608.07795">paper</a> has the full bibliography.</p>
   <div class="refs">
     <p id="ref-angelopoulos2023gentle">Angelopoulos, A. N. and Bates, S. (2023). Conformal prediction: A gentle introduction. <i>Foundations and Trends in Machine Learning</i>, 16(4):494–591. <a href="https://doi.org/10.1561/2200000101">[link]</a></p>
     <p id="ref-azizi2022sred">Azizi, I. and Rudnytskyi, I. (2022). Improving real estate rental estimations with visual data. <i>Big Data and Cognitive Computing</i>, 6(3):96. <a href="https://doi.org/10.3390/bdcc6030096">[link]</a></p>
@@ -1595,6 +1623,24 @@ document.documentElement.setAttribute("data-theme",t);}catch(e){document.documen
     <p id="ref-vovk2005algorithmic">Vovk, V., Gammerman, A., and Shafer, G. (2005). <i>Algorithmic Learning in a Random World</i>. Springer.</p>
     <p id="ref-vovk2012conditional">Vovk, V. (2012). Conditional validity of inductive conformal predictors. In <i>Proceedings of the Asian Conference on Machine Learning</i>, PMLR 25:475–490. <a href="https://proceedings.mlr.press/v25/vovk12.html">[link]</a></p>
     <p id="ref-wang2022e5">Wang, L., Yang, N., Huang, X., Yang, L., Majumder, R., and Wei, F. (2024). Multilingual E5 text embeddings: A technical report. arXiv:2402.05672. <a href="https://arxiv.org/abs/2402.05672">[link]</a></p>
+  </div>
+</section>
+
+<!-- ============ CITATION ============ -->
+<section id="cite">
+  <div class="step-head"><span class="step-num">12</span><h2>Citation</h2></div>
+  <div class="citeblock">
+    <button id="citecopy" class="copybtn" type="button" aria-label="Copy the BibTeX entry to the clipboard"><svg class="i-copy" viewBox="0 0 16 16" aria-hidden="true"><rect x="5.5" y="5.5" width="8" height="9" rx="1.4"></rect><path d="M10.5 3.2A1.7 1.7 0 0 0 8.8 1.5H3.9a1.7 1.7 0 0 0-1.7 1.7v7a1.7 1.7 0 0 0 1.7 1.7h.6"></path></svg><svg class="i-done" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.4 6.2 11.6 13 4.8"></path></svg><span class="copylabel">Copy</span></button>
+    <pre class="bibtex" id="citebib">@misc{azizi2026modality,
+  title         = {Conformal Calibration for Multi-Modal Regression with Missing Modalities},
+  author        = {Azizi, Ilia},
+  year          = {2026},
+  eprint        = {2608.07795},
+  archivePrefix = {arXiv},
+  primaryClass  = {stat.ML},
+  url           = {https://arxiv.org/abs/2608.07795}
+}</pre>
+    <span id="citecopied" class="sr-only" role="status" aria-live="polite"></span>
   </div>
 </section>
 
@@ -2465,6 +2511,67 @@ document.documentElement.setAttribute("data-theme",t);}catch(e){document.documen
     if (!pop.hidden && !pop.contains(e.target)) close();
   });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
+})();
+</script>
+<script>
+/* copy the BibTeX entry: async clipboard where available, execCommand otherwise */
+(function () {
+  "use strict";
+  var btn = document.getElementById("citecopy");
+  var block = document.getElementById("citebib");
+  var state = document.getElementById("citecopied");
+  var label = btn && btn.querySelector(".copylabel");
+  if (!btn || !block || !state || !label) return;
+  var timer;
+
+  function flash(msg, ok) {
+    label.textContent = ok ? "Copied" : "Failed";
+    btn.classList.toggle("done", ok);
+    state.textContent = msg;               /* announced once, visually hidden */
+    clearTimeout(timer);
+    timer = setTimeout(function () {
+      label.textContent = "Copy";
+      btn.classList.remove("done");
+      state.textContent = "";
+    }, 2400);
+  }
+
+  /* file:// previews and old browsers have no async clipboard; iOS also needs the
+     explicit selection range, since select() alone does nothing on a readonly field */
+  function legacyCopy(text) {
+    var ta = document.createElement("textarea");
+    ta.value = text;
+    ta.setAttribute("readonly", "");
+    ta.style.cssText = "position:fixed;top:0;left:0;width:1px;height:1px;opacity:0";
+    document.body.appendChild(ta);
+    var sel = document.getSelection();
+    var prev = sel && sel.rangeCount ? sel.getRangeAt(0) : null;
+    ta.focus();
+    ta.select();
+    if (ta.setSelectionRange) ta.setSelectionRange(0, text.length);
+    var ok = false;
+    try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+    document.body.removeChild(ta);
+    if (prev && sel) { sel.removeAllRanges(); sel.addRange(prev); }
+    return ok;
+  }
+
+  function fallback(text) {
+    var ok = legacyCopy(text);
+    flash(ok ? "BibTeX copied to the clipboard" : "Copy blocked — select the text instead", ok);
+  }
+
+  btn.addEventListener("click", function () {
+    var text = block.textContent;
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(
+        function () { flash("BibTeX copied to the clipboard", true); },
+        function () { fallback(text); }
+      );
+    } else {
+      fallback(text);
+    }
+  });
 })();
 </script>
 </body>
