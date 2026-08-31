@@ -1255,8 +1255,8 @@ document.documentElement.setAttribute("data-theme",t);}catch(e){document.documen
         calibration, and the per-run outputs record the selected scales and quantiles.
         The SEMF-derived SRED results are presented as empirical diagnostics rather than formal
         proposition instances.</li>
-        <li><strong>What is <em>not</em> claimed:</strong> coverage conditional on a specific x
-        (impossible distribution-free, <a href="#ref-barber2021limits">Barber et al., 2021</a>) or conditional
+        <li><strong>What is <em>not</em> claimed:</strong> nontrivial exact coverage conditional on every specific x
+        without restrictions (impossible distribution-free, <a href="#ref-barber2021limits">Barber et al., 2021</a>) or conditional
         on the realized calibration scores. The propositions do condition on 𝒟<sub>pre</sub>, exactly as
         stated; Proposition 2 additionally gives a finite-stratum group-conditional guarantee.</li>
         <li><strong>Pooling small strata</strong> changes the stated construction. If it is used as an
@@ -1656,7 +1656,7 @@ document.documentElement.setAttribute("data-theme",t);}catch(e){document.documen
     <dt>Mondrian CP</dt><dd>Separate calibration quantile per pre-declared category. The name comes from <a href="#ref-vovk2005algorithmic">Vovk et al. (2005)</a>; the per-group validity result used here follows <a href="#ref-vovk2012conditional">Vovk (2012)</a>.</dd>
     <dt>PICP / MPIW</dt><dd>Empirical coverage (want ≈ 0.95) / mean interval width (want small, given coverage).</dd>
     <dt>Interval CRPS</dt><dd>Proper score combining coverage and sharpness in one number, computed as a uniform distribution over the interval (<a href="#ref-gneiting2007calibration">Gneiting et al., 2007</a>).</dd>
-    <dt>Marginal vs conditional</dt><dd>Guaranteed on average vs guaranteed for each x. Exact conditional is impossible distribution-free. Groups are the honest middle.</dd>
+    <dt>Marginal vs conditional</dt><dd>Guaranteed on average vs guaranteed for each x. Nontrivial exact conditional coverage for every x is impossible distribution-free without restrictions. Groups are the honest middle.</dd>
     <dt>SRED</dt><dd>Swiss Real Estate Dataset (<a href="#ref-azizi2022sred">Azizi &amp; Rudnytskyi, 2022</a>): ≈11,000 Swiss apartment rental listings with tabular attributes, description text, and photos. The target is log monthly rent.</dd>
     <dt>SEMF</dt><dd>Supervised Expectation-Maximization Framework (<a href="#ref-azizi2025semf">Azizi et al., 2025</a>). The cached diagnostic used here retains latent-propagated decoder outputs, not samples from the full predictive response distribution.</dd>
     <dt>NCIW</dt><dd>Normalized calibrated interval width (<a href="#ref-azizi2026clear">Azizi et al., 2026</a>): a post-hoc diagnostic that applies the smallest common scaling factor reaching at least the target empirical coverage, then normalizes the resulting width by the observed target range (max minus min of the test labels). It peeks at test labels, so it is not a deployable metric.</dd>
