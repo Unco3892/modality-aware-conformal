@@ -253,36 +253,23 @@ GPU, eight CPUs, and 48 GB of RAM per task, while the SEMF jobs used CPU
 allocations of up to 48 CPUs and 48 GB of RAM. The exact dependency versions
 are listed in `requirements.txt`.
 
-## Citation
+## Cite this work
 
-The paper is accepted at COPA 2026. Until PMLR volume 329 appears, please cite the arXiv preprint:
-
-```bibtex
-@misc{azizi2026modality,
-  title         = {Conformal Calibration for Multi-Modal Regression with Missing Modalities},
-  author        = {Azizi, Ilia},
-  year          = {2026},
-  eprint        = {2608.07795},
-  archivePrefix = {arXiv},
-  primaryClass  = {stat.ML},
-  url           = {https://arxiv.org/abs/2608.07795}
-}
-```
-
-<!-- Once the proceedings are published, cite the version of record instead:
+Please cite the COPA 2026 paper in Proceedings of Machine Learning Research, volume 329:
 
 ```bibtex
-@inproceedings{azizi2026modality,
+@InProceedings{azizi26a,
   title     = {Conformal Calibration for Multi-Modal Regression with Missing Modalities},
   author    = {Azizi, Ilia},
   booktitle = {Proceedings of the Fifteenth Symposium on Conformal and Probabilistic Prediction with Applications},
-  series    = {Proceedings of Machine Learning Research},
-  volume    = {329},
+  pages     = {343--377},
   year      = {2026},
-  publisher = {PMLR}
+  volume    = {329},
+  series    = {Proceedings of Machine Learning Research},
+  publisher = {PMLR},
+  url       = {https://proceedings.mlr.press/v329/azizi26a.html},
 }
-``` 
--->
+```
 
 ## License
 
